@@ -1,0 +1,217 @@
+.t-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.blinking {
+	animation: blink 0.7s 3.8s ease-in-out infinite alternate;
+}
+
+.is-Cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.is-Shadow {
+	display: block;
+	transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+	opacity: 0.9;
+	background-color: rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+	animation: 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) shadow 2;
+}
+@-webkit-keyframes blink {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+@-moz-keyframes blink {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes blink {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes hhh_line {
+	0% {
+		stroke-dashoffset: 2500;
+	}
+
+	60% {
+		fill: transparent;
+	}
+
+	100% {
+		stroke-dashoffset: 0;
+		fill: #fff;
+	}
+}
+@keyframes Border {
+	0% {
+		stroke-dashoffset: 1500;
+	}
+
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes ani-mouse {
+  0% {
+    opacity: 1;
+    top: 20%;
+  }
+
+  15% {
+    opacity: 1;
+    top: 50%;
+  }
+
+  50% {
+    opacity: 0;
+    top: 50%;
+  }
+
+  100% {
+    opacity: 0;
+    top: 40%;
+  }
+}
+
+.is-Scroll-Button{
+  display: block;
+  position: absolute;
+  bottom: 10vh;
+  left: 50%;
+  transform: translateX(-50%) translateY(8vh);
+}
+
+.is-Mouse{
+  position: relative;
+  display: block;
+  width: 3.5rem;
+  height: 5rem;
+  box-sizing: border-box;
+  border: .1rem solid #fff;
+  border-radius: 2rem;
+  span{
+    position: absolute;
+  	display: block;
+  	top: 20%;
+  	left: 50%;
+  	width: .8rem;
+  	height: .8rem;
+  	margin: -.4rem 0 0 -.4rem;
+  	background-color: #fff;
+  	border-radius: 50%;
+  	animation: ani-mouse 2.5s linear infinite;
+  }
+}
+
+
+.is-modal{
+	position: relative;
+	display: none;
+	height: 50rem;
+	.is-modaloverlay{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background-color: rgba(0,0,0,0.9);
+		z-index: 2;
+	}
+}
+.is-modalInner{
+	width: 1000px;
+	height: 50rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	background-color: #000;
+	z-index: 5;
+}
+
+.is-modalClose{
+	position: fixed;
+	right: 8rem;
+	top: 8rem;
+	z-index: 6;
+	border: none;
+	background: none;
+	cursor: pointer;
+	outline: none;
+}
+
+.is-modalCloseLine{
+	position: absolute;
+	width: 2.8rem;
+	height: .2rem;
+	background-color: #fff;
+	display: block;
+	&:first-child{
+		transform: rotate(45deg);
+	}
+	&:last-child{
+		transform: rotate(-45deg);
+	}
+}
+
+.is-MemberPosition{
+	position: absolute;
+	left:  0 !important;
+	top: 0 !important;
+	z-index: 10;
+	transform: translateY(0%) translateX(0%);
+}
+
+.is-fadeIn{
+	opacity: 0;
+	transform: translateY(30px);
+}
+
+.is-fadeInFire{
+	position: absolute;
+	bottom: 10%;
+	left: 0;
+	width: 10rem;
+	height: 10rem;
+}
+
+
+.is-bgSlideOut{
+	transform: translateX(-100%);
+}
+
+.is-bgSlide{
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	position: absolute;
+	z-index: 2;
+	overflow: hidden;
+}
