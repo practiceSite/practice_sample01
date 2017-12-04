@@ -59,11 +59,7 @@ typings/
 
 node_modules/
 .sass-cashe/
-dev/css
-dev/img/
-dev/js
-dev/font
-dev/*.html
+dev/
 .git
 .DS_Store
 .idea/
